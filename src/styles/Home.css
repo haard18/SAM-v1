@@ -1,0 +1,7 @@
+/* styles.css or your Tailwind configuration file */
+.bg-gradient-svg {
+    background-image: url('/path/to/gradient.svg');
+    background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+  }
+  
