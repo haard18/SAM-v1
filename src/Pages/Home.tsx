@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'; // Import useNavigate from react
 import CustomCard from '../Components/Cards'; // Import the CustomCard component
 import Wallet from '../Components/Wallet-Button'; // Import Wallet Button
 import { useActiveAddress } from 'arweave-wallet-kit'
+import Footer from '../Components/Footer';
 
 
 const Home: React.FC = () => {
