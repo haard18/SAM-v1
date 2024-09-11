@@ -1,6 +1,14 @@
-/* App.css */
 .app-background {
-  background: radial-gradient(circle, #262626, #010101);
-  height: 100vh; /* Ensure the gradient covers the full height */
-  width: 100vw; /* Ensure the gradient covers the full width */
+  background: radial-gradient(circle at 10% 10%, #262626, transparent 20%),
+    /* First circle - smaller and positioned at the top left */
+    radial-gradient(circle at 90% 10%, #262626, transparent 20%),
+    /* Second circle - smaller and positioned at the top right */
+   
+    /* Fourth circle - smaller and positioned at the bottom right */
+    radial-gradient(circle at 50% 50%, #010101, #010101 100%);
+    /* Base background */
+  height: 100vh;
+  /* Ensure the gradient covers the full height */
+  width: 100vw;
+  /* Ensure the gradient covers the full width */
 }

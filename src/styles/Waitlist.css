@@ -1,54 +1,87 @@
 .checkmark {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: #28a745; /* Green background */
-    position: relative;
-    margin: 20px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .checkmark_stem {
-    position: absolute;
-    width: 5px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #28a745;
+  /* Green background */
+  position: relative;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkmark_stem {
+  position: absolute;
+  width: 5px;
+  height: 0;
+  background-color: white;
+  /* White color for the checkmark */
+  left: 50%;
+  top: 50%;
+  transform-origin: bottom left;
+  transform: translate(-50%, -50%) rotate(45deg);
+  /* Centering and rotating the stem */
+  animation: stem 0.3s ease-in-out 0.5s forwards;
+}
+
+.checkmark_kick {
+  position: absolute;
+  width: 5px;
+  height: 0;
+  background-color: white;
+  /* White color for the checkmark */
+  left: 50%;
+  top: 50%;
+  transform-origin: bottom right;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  /* Centering and rotating the kick */
+  animation: kick 0.3s ease-in-out 0.8s forwards;
+}
+
+@keyframes stem {
+  0% {
     height: 0;
-    background-color: white; /* White color for the checkmark */
-    left: 50%;
-    top: 50%;
-    transform-origin: bottom left;
-    transform: translate(-50%, -50%) rotate(45deg); /* Centering and rotating the stem */
-    animation: stem 0.3s ease-in-out 0.5s forwards;
   }
-  
-  .checkmark_kick {
-    position: absolute;
-    width: 5px;
+
+  100% {
+    height: 25px;
+    /* Adjusted height for visibility */
+  }
+}
+
+@keyframes kick {
+  0% {
     height: 0;
-    background-color: white; /* White color for the checkmark */
-    left: 50%;
-    top: 50%;
-    transform-origin: bottom right;
-    transform: translate(-50%, -50%) rotate(-45deg); /* Centering and rotating the kick */
-    animation: kick 0.3s ease-in-out 0.8s forwards;
   }
-  
-  @keyframes stem {
-    0% {
-      height: 0;
-    }
-    100% {
-      height: 25px; /* Adjusted height for visibility */
-    }
+
+  100% {
+    height: 15px;
+    /* Adjusted height for visibility */
   }
-  
-  @keyframes kick {
-    0% {
-      height: 0;
-    }
-    100% {
-      height: 15px; /* Adjusted height for visibility */
-    }
-  }
-  
+}
+
+.gradient-text span {
+  display: inline-block;
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.185));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  font-family: 'Anton SC', sans-serif;
+}
+
+.notifications {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.update-item {
+  background: #1a1a1a;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.update-item p {
+  margin: 0;
+}
